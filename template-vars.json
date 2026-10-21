@@ -1,0 +1,1 @@
+{"SURREAL_PASS":{"defaultValue":"${{secret(32)}}","description":"Root password for the SurrealDB root user. Auto-generated per deployment; find it in the service variables after deploy.","isOptional":false}}

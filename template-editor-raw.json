@@ -1,0 +1,1 @@
+{"SURREAL_PASS":{"description":"Root password for the SurrealDB root user. Auto-generated per deployment; find it in the service variables after deploy.","value":"${{secret(32)}}"}}
