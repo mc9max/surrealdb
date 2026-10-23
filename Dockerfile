@@ -54,6 +54,14 @@ HEALTHCHECK NONE
 # The upstream binary is glibc-linked, so it runs unmodified on Debian.
 COPY --from=upstream /surreal /surreal
 
+# CA certificates: the binary builds an HTTP client at startup and refuses
+# to boot when no system CA bundle is loaded ("No CA certificates were
+# loaded from the system" — verified in e2e 2026-10-22). Debian slim ships
+# none, so copy the bundle from the upstream (Wolfi) image and point
+# SSL_CERT_FILE at it, matching upstream's own env.
+COPY --from=upstream /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/ca-certificates.crt
+ENV SSL_CERT_FILE=/etc/ssl/certs/ca-certificates.crt
+
 # Baked literal defaults — kept off the one-click deploy form.
 ENV SURREAL_USER=root \
     SURREAL_DEFAULT_NAMESPACE=main \
