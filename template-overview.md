@@ -1,6 +1,6 @@
 # Deploy and Host
 
-[![Deploy on Railway](https://railway.app/button.svg)](https://railway.com/deploy/surrealdb?utm_campaign=surrealdb)
+[![Deploy on Railway](https://railway.app/button.svg)](https://railway.com/deploy/surrealdb-1?utm_campaign=surrealdb)
 
 **SurrealDB** — the ultimate multi-model database as a one-click Railway template. Document, graph, relational, vector and time-series data behind one SurrealQL interface, one binary, one always-on service. Zero form fields on deploy; the root password is auto-generated.
 
